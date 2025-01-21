@@ -44,15 +44,26 @@ It gives new collectors a place to start, non-error collectors a way to learn mo
    ```sh
    bundle install
    ```
-5. **Run the Site**  
-   ```sh
-   bundle exec jekyll serve
-   ```
-6. **View the Site**  
-   Open your browser at [http://127.0.0.1:4000](http://127.0.0.1:4000)
 
-## Development Setup
+## Running Tasks
 
-1. Serve the Site and Run Tests
+You can use the `Makefile` to simplify running common tasks:
 
-This setup allows you to run the server and tests with a single command: `rake test`.
+- **Serve the Site Locally to Debug or run a Manual Test**:
+  ```sh
+  make serve
+  ```
+
+- **Run Tests**:
+  ```sh
+  make test
+  ```
+
+- **Build the Site**:
+  ```sh
+  make build
+  ```
+
+## Viewing the Site
+
+After running `make serve`, open your browser at [http://127.0.0.1:4000](http://127.0.0.1:4000)
