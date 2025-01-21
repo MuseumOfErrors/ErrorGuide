@@ -12,13 +12,17 @@ It gives new collectors a place to start, non-error collectors a way to learn mo
 ### Home Page
 - Welcome message and introduction
 - Navigation bar
+
 ### About Page
 - Project goals and motivations
+
 ### Error Guide Page
 - Comprehensive info on different error card types
 - Placeholder diagram showing errors and relationships
+
 ### Navigation Bar
 - Links to Home, About, and Error Guide
+
 ### Future Enhancements
 - GitHub Actions for CI/CD
 - Selenium tests for eBay searches
