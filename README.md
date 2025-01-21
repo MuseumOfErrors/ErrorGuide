@@ -31,20 +31,18 @@ It gives new collectors a place to start, non-error collectors a way to learn mo
    ```sh
    gem install jekyll bundler
    ```
-3. Clone the Repository
+3. **Clone the Repository**  
    ```sh
-   git clone https://github.com/Burke9077/ErrorGuide
+   git clone https://github.com/MuseumOfErrors/ErrorGuide
    cd ErrorGuide
    ```
-4. Install Dependencies
+4. **Install Dependencies**  
    ```sh
    bundle install
    ```
-5. Run the Site
+5. **Run the Site**  
    ```sh
    bundle exec jekyll serve
    ```
-6. View the Site
-   ```sh
-   Open your browser at http://127.0.0.1:4000
-   ```
+6. **View the Site**  
+   Open your browser at [http://127.0.0.1:4000](http://127.0.0.1:4000)

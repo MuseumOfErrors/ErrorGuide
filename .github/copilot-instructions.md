@@ -39,3 +39,8 @@ Museumoferrors.com is an open-source site collecting data on Pokémon error card
 1. Install Jekyll and Bundler:
    ```sh
    gem install jekyll bundler
+   ```
+
+## GitHub Repository
+
+The GitHub repository for this project is: [https://github.com/MuseumOfErrors/ErrorGuide](https://github.com/MuseumOfErrors/ErrorGuide)
