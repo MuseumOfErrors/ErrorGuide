@@ -24,7 +24,7 @@ jobs:
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '2.7' # Match the Ruby version used locally
+        ruby-version: '3.2.6' # Updated Ruby version
 
     - name: Install dependencies
       run: |
