@@ -18,6 +18,8 @@ gem "minima", "~> 2.5"
 gem "csv"
 gem "base64"
 gem "bigdecimal"
+gem 'rake'
+gem 'minitest'
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
 end
