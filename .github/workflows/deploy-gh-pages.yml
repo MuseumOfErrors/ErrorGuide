@@ -1,6 +1,10 @@
 name: Deploy to GitHub Pages
 
 on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: # Allow manual triggering
   workflow_run:
     workflows: ["Run Tests"]
     types:
@@ -11,7 +15,7 @@ permissions:
 
 jobs:
   deploy:
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
     runs-on: ubuntu-latest
 
     steps:
@@ -20,7 +24,7 @@ jobs:
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '3.2'
+        ruby-version: '2.7' # Match the Ruby version used locally
 
     - name: Install dependencies
       run: |
