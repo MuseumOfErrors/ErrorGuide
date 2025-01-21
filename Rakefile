@@ -4,7 +4,8 @@ require 'rake/testtask'
 # Define a task to serve the Jekyll site
 desc "Serve the Jekyll site"
 task :serve do
-  sh "bundle exec jekyll serve"
+  trap("INT") { puts "\nInterrupted"; exit 1 }
+  exec "bundle exec jekyll serve"
 end
 
 # Define a task to run tests
