@@ -6,6 +6,7 @@ _site/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
+Gemfile.lock
 
 # Additional Ruby/bundler ignore for when you run: bundle install
 /vendor
@@ -15,4 +16,22 @@ _site/
 # This means GitHub Pages will NOT use your Gemfile.lock and therefore it is
 # counterproductive to check this file into the repository.
 # Details at https://github.com/github/pages-gem/issues/768
-Gemfile.lock
+
+# Logs and databases
+*.log
+*.sqlite3
+*.sqlite3-journal
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Node modules
+node_modules/
+
+# Bundler config
+.bundle/
+
+# Temporary files
+*.tmp
+*.swp
