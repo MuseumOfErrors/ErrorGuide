@@ -46,3 +46,9 @@ It gives new collectors a place to start, non-error collectors a way to learn mo
    ```
 6. **View the Site**  
    Open your browser at [http://127.0.0.1:4000](http://127.0.0.1:4000)
+
+## Development Setup
+
+1. Serve the Site and Run Tests
+
+This setup allows you to run the server and tests with a single command: `rake test`.
