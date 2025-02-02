@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,6 +19,8 @@ jobs:
       run: |
         gem install bundler
         bundle install
+    - name: Run tests
+      run: rake test
     - name: Build the site
       run: bundle exec jekyll build
     - name: Deploy to GitHub Pages
