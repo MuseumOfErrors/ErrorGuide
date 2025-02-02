@@ -41,6 +41,8 @@ jobs:
       run: |
         gem install bundler
         bundle install
+    - name: Create build directory
+      run: mkdir -p ${{ github.workspace }}/_site
     - name: List contents before build
       run: ls -la ${{ github.workspace }}/_site
     - name: Build the site
