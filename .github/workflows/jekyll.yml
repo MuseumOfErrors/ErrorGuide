@@ -11,6 +11,15 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Merge main into gh-pages
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git checkout gh-pages
+        git merge main
+        git push origin gh-pages
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Setup Ruby
       uses: ruby/setup-ruby@v1
       with:
@@ -29,12 +38,3 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_branch: gh-pages
         publish_dir: ./_site
-    - name: Merge main into gh-pages
-      run: |
-        git config --global user.name 'github-actions[bot]'
-        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git checkout gh-pages
-        git merge main
-        git push origin gh-pages
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
