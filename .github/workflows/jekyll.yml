@@ -26,6 +26,8 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     needs: test
+    permissions:
+      contents: write  # Ensure the token has write permissions
 
     steps:
     - uses: actions/checkout@v2
