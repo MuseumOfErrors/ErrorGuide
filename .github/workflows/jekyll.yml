@@ -41,8 +41,12 @@ jobs:
       run: |
         gem install bundler
         bundle install
+    - name: List contents before build
+      run: ls -la ${{ github.workspace }}/_site
     - name: Build the site
       run: bundle exec jekyll build --destination ${{ github.workspace }}/_site
+    - name: List contents after build
+      run: ls -la ${{ github.workspace }}/_site
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
