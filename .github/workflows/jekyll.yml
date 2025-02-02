@@ -33,18 +33,6 @@ jobs:
     - uses: actions/checkout@v2
       with:
         fetch-depth: 0  # Ensure the full history is fetched
-    - name: Checkout gh-pages branch
-      run: |
-        git fetch origin gh-pages:gh-pages
-        git checkout gh-pages
-    - name: Merge main into gh-pages
-      run: |
-        git config --global user.name 'github-actions[bot]'
-        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git merge main --no-edit
-        git push origin gh-pages
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Setup Ruby
       uses: ruby/setup-ruby@v1
       with:
@@ -59,5 +47,4 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_branch: gh-pages
         publish_dir: ./_site
