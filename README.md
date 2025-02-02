@@ -1,6 +1,6 @@
 # Museum of Errors
 
-Museumoferrors.com is an open-source site collecting data on Pokémon error cards.  
+[Museumoferrors.com](http://museumoferrors.com) is an open-source site collecting data on Pokémon error cards.  
 It gives new collectors a place to start, non-error collectors a way to learn more about their finds, and experienced collectors a platform to share resources.
 
 ## Project Overview
