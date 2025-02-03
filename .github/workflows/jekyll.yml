@@ -41,6 +41,16 @@ jobs:
       run: |
         gem install bundler
         bundle install
+    - name: List contents of root directory
+      run: ls -la ${{ github.workspace }}
+    - name: List contents of _includes
+      run: ls -la ${{ github.workspace }}/_includes
+    - name: List contents of _layouts
+      run: ls -la ${{ github.workspace }}/_layouts
+    - name: List contents of _pages
+      run: ls -la ${{ github.workspace }}/_pages
+    - name: List contents of _posts
+      run: ls -la ${{ github.workspace }}/_posts
     - name: Create build directory
       run: mkdir -p ${{ github.workspace }}/_site
     - name: List contents before build
